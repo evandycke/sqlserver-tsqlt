@@ -1,0 +1,1 @@
+EXEC tSQLt.Run 'testPerson_Schema';
