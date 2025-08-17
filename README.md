@@ -21,15 +21,10 @@ Ce projet illustre l'intégration de [tSQLt](https://tsqlt.org/) dans un environ
 
 ```bash
 /tsqlt-project/
-├── Database/
-│   ├── Scripts/           # Scripts de création de base et de schémas
-│   ├── Procedures/        # Procédures stockées métier
-│   └── Functions/         # Fonctions utilisées dans l'application
 ├── Tests/
 │   ├── TestCases/         # Cas de test unitaires organisés par module
 │   └── Setup/             # Données de test et mocks
 ├── tsqlt/                 # Framework tSQLt (fichiers nécessaires à l'installation)
-├── CI/                    # Pipelines de test automatisés (ex: GitHub Actions, Azure DevOps)
 └── README.md              # Documentation du projet
 ```
 
