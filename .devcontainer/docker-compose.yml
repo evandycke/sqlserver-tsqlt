@@ -21,6 +21,7 @@ services:
     volumes:
       - sqlserverdata:/var/opt/mssql
       - ../backup:/var/opt/mssql/backup
+      - ../tests:/var/opt/mssql/tests
     restart: unless-stopped
 
 volumes:
