@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  dev:
+    image: mcr.microsoft.com/devcontainers/base:debian
+    container_name: devcontainer-tsqlt
+    volumes:
+      - ..:/workspace:cached
+    depends_on:
+      - sqlserver
+    command: sleep infinity
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver-tsqlt
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourStrong!Passw0rd
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserverdata:/var/opt/mssql
+      - ../backup:/var/opt/mssql/backup
+    restart: unless-stopped
+
+volumes:
+  sqlserverdata:
