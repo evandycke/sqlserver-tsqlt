@@ -1,0 +1,3 @@
+# On évite de pousser sur Git des gros fichiers
+backup/AdventureWorks2022.bak
+backup/WideWorldImporters-Full.bak
